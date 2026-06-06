@@ -1,11 +1,9 @@
 /*
-================================================================================
-|                                                                              |
-|                         JELLYFIN CUSTOM THEME                                |
-|                         Main Stylesheet (theme.css)                          |
-|                                                                              |
-================================================================================
-*/
+ * @Author: Ser4ph4
+ * @Date: 2026-06-06 20:10:51
+ * @LastEditors: Ser4ph4
+ * @LastEditTime: 2026-06-06 20:56:32
+ */
 
 /* ~~~~~~~~~~~~~~~~~~~~ EXTERNAL IMPORTS ~~~~~~~~~~~~~~~~~~~~ */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
@@ -2871,8 +2869,6 @@ div[class=""] {
     margin-left: 11px !important;
     margin-top: 11px !important;
 }
-
-
 
 .layout-desktop .itemMiscInfo,
 .layout-desktop .nameContainer {
