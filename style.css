@@ -2904,7 +2904,32 @@ div#listChildrenCollapsible {
 .collectionItems .sectionTitleContainer-cards {
     padding-left: 0 !important;
 }
+.backdrop.with-video {
+    mask-image:
+      linear-gradient(to top, #fff0 2%, rgb(0 0 0 / 0.5) 6%, #000000 8%),
+      linear-gradient(to right, black 30%, transparent 85%);
 
+    -webkit-mask-image:
+      linear-gradient(to top, #fff0 2%, rgb(0 0 0 / 0.5) 6%, #000000 8%),
+      linear-gradient(to right, black 30%, transparent 85%);
+
+    /* Firefox usa 'intersect', Chrome usa 'source-in' */
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
+  }
+
+  .video-container {
+    mask-image:
+      linear-gradient(to right, transparent 10%, black 30%),
+      linear-gradient(to top, transparent 15%, rgba(0, 0, 0, 0.5) 20%, black 30%);
+
+    -webkit-mask-image:
+      linear-gradient(to right, transparent 10%, black 30%),
+      linear-gradient(to top, transparent 15%, rgba(0, 0, 0, 0.5) 20%, black 30%);
+
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
+  }
 .mainDetailButtons {
     margin-left: -5em;
 }
