@@ -2933,3 +2933,7 @@ div#listChildrenCollapsible {
 .mainDetailButtons {
     margin-left: -5em;
 }
+
+ [data-type="CollectionFolder"] .cardText, [data-type="UserView"] .cardText {
+    display: none;
+}
