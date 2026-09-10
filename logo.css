@@ -1,0 +1,90 @@
+/* Jellyfish Blue Theme */
+:root {
+    --primary-r: 0;
+    --primary-g: 164;
+    --primary-b: 220;
+    --primary-accent-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 1.0);
+    --secondary-accent-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 0.6);
+    --primary-background-transparent: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 0.1);
+    --secondary-background-transparent: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 0.2);
+    --primary-background-color: #000000; /* Main background */
+    --secondary-background-color: #181818; /* Drawer, cards, dialogs */
+    --tertiary-background-color: #252525; /* Popovers */
+    --alt-accent-color: #ffffff20;
+    --text-color: #000000;
+    --header-background-color: #ffffff6e; /* This is header and tabs background */
+    --logo: url("https://cdn.jsdelivr.net/gh/n00bcodr/jellyfish/logos/jellyfish.png");
+    --background-image: url(https://cdn.jsdelivr.net/gh/n00bcodr/Jellyfish/colors/images/jellyblue.jpg);
+    --footer-message: "🐼 This server runs on snacks and sleepless nights!";
+
+    /* Alternate accents*/
+    --primary-alt1: rgba(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 1);
+    --primary-alt2: rgba(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.85);
+    --primary-alt3: rgba(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.7);
+    --primary-alt4: rgba(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.55);
+    --primary-alt5: rgba(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.4);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ LOGO - Default (Skin Clássica) ~~~~~~~~~~~~~~~~~~~~ */
+
+/* Estilo para a logo do Jellyfin quando não há uma logo customizada definida */
+.pageTitleWithDefaultLogo {
+    background-image: var(--logo) !important;
+    background-size: 100% !important;
+}
+
+/* Dimensões e posicionamento da logo no desktop/tv */
+.layout-tv .pageTitleWithLogo, .layout-desktop .pageTitleWithLogo {
+    margin-left: 25px !important;
+    height: 60px !important;
+    width: 140px !important;
+}
+
+/* Dimensões e posicionamento da logo no mobile */
+.layout-mobile .pageTitleWithLogo {
+    height: 30px !important;
+    width: 100px !important;
+    margin: 0 1em 0 .5em !important;
+    padding: 10px !important;
+}
+
+/* Margem geral do título da página (quando não há logo ou é só texto) */
+[dir="ltr"] .pageTitle {
+    margin: 0 1em 0 .5em !important;
+}
+
+/* Corrige títulos vazios que ocupariam espaço por causa da margem */
+[dir="ltr"] .pageTitle:not(.pageTitleWithLogo):empty {
+    margin: 0 !important;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ LOGO - Jellyfin 12+ (MUI / React Top Bar) ~~~~~~~~~~~~~~~~~~~~ */
+
+/* Esconde o nome do servidor em texto e substitui o ícone padrão pela variável --logo */
+.MuiToolbar-root .MuiButtonBase-root:has(.MuiButton-startIcon img) {
+    font-size: 0 !important;
+    min-width: 0 !important;
+}
+.MuiToolbar-root .MuiButtonBase-root:has(.MuiButton-startIcon img) .MuiButton-startIcon {
+    position: relative !important;
+    width: 5em !important;
+    height: 3em !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+}
+.MuiToolbar-root .MuiButtonBase-root:has(.MuiButton-startIcon img) .MuiButton-startIcon img {
+    visibility: hidden !important;
+}
+.MuiToolbar-root .MuiButtonBase-root:has(.MuiButton-startIcon img) .MuiButton-startIcon::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: var(--logo) no-repeat center center !important;
+    background-size: contain !important;
+}
+
+/* Logo menor no mobile */
+.layout-mobile .MuiToolbar-root .MuiButtonBase-root:has(.MuiButton-startIcon img) .MuiButton-startIcon {
+    width: 3em !important;
+    height: 2em !important;
+}
