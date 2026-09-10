@@ -1,17 +1,5 @@
 /*
 ================================================================================
-|  ARQUIVO ORGANIZADO E VALIDADO                                              |
-|  - Sintaxe verificada: 892 chaves abertas / 892 fechadas (balanceado)       |
-|  - 0 erros de parsing CSS encontrados                                      |
-|  - Todas as variáveis usadas via var(--x, fallback) sem fallback           |
-|    possuem fallback definido no próprio uso (não são bugs)                 |
-|  - Reformatado (indentação e 1 propriedade por linha) para leitura         |
-|  - Ordem original mantida: base -> media bar add-on -> companion JF12      |
-================================================================================
-*/
-
-/*
-================================================================================
 |                                                                              |
 |                    ELEGANTFIN THEME v26.09.05 (base)                        |
 |                    by lscambo13                                             |
